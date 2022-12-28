@@ -56,4 +56,5 @@ body {
 
 .grid-section {
   grid-column: 2/4;
+  width: 100%;
 }
