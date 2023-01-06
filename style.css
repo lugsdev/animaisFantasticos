@@ -186,6 +186,14 @@ body {
   font-weight: bold;
 }
 
+.js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.ativo {
+  display: block !important;
+}
+
 @media (max-width: 700px) {
   body {
     grid-template-columns: 1fr;
