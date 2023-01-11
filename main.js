@@ -37,3 +37,45 @@ function faq() {
   }
 }
 faq();
+
+function scrollSmooth() {
+  const linksInterno = document.querySelectorAll('.js-menu a[href^="#"]');
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  linksInterno.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+}
+scrollSmooth();
+
+function scrollAnimation() {
+  const sections = document.querySelectorAll(".js-scroll");
+  if (sections.length) {
+    const windowSize = window.innerHeight * 0.65;
+
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowSizeAnima = sectionTop - windowSize < 0;
+        if (windowSizeAnima) {
+          section.classList.add("ativo");
+        } else {
+          section.classList.remove("ativo");
+        }
+      });
+    }
+    animaScroll();
+    window.addEventListener("scroll", animaScroll);
+  }
+}
+scrollAnimation();
