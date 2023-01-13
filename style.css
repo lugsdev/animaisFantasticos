@@ -70,7 +70,7 @@ body {
   font-size: 6rem;
   line-height: 1;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   grid-column: 1/4;
 }
 
@@ -79,7 +79,7 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: #e54;
 }
 
